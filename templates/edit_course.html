@@ -1,0 +1,16 @@
+<form method="POST">
+    <label for="course_name">Course Name:</label><br>
+    <input type="text" id="course_name" name="course_name" value="{{ course.course_name }}" required><br><br>
+
+    <label for="teacher_id">Teacher:</label><br>
+    <select id="teacher_id" name="teacher_id" required>
+        {% for teacher in teachers %}
+        <option value="{{ teacher.teacher_id }}" {% if teacher.teacher_id == course.teacher_id %}selected{% endif %}>{{ teacher.first_name }} {{ teacher.last_name }}</option>
+        {% endfor %}
+    </select><br><br>
+
+    <label for="credits">Credits:</label><br>
+    <input type="number" id="credits" name="credits" value="{{ course.credits }}" required><br><br>
+
+    <button type="submit">Update Course</button>
+</form>

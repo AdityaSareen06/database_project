@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Enrollment</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/formstyle.css') }}">
+</head>
+<body>
+    <h2>Add New Enrollment</h2>
+    <form method="POST">
+        <label for="student_id">Student:</label><br>
+        <select id="student_id" name="student_id" required>
+            {% for student in students %}
+                <option value="{{ student.student_id }}">{{ student.first_name }} {{ student.last_name }}</option>
+            {% endfor %}
+        </select><br><br>
+
+        <label for="course_id">Course:</label><br>
+        <select id="course_id" name="course_id" required>
+            {% for course in courses %}
+                <option value="{{ course.course_id }}">{{ course.course_name }}</option>
+            {% endfor %}
+        </select><br><br>
+
+        <button type="submit">Add Enrollment</button>
+    </form>
+    <br>
+    <a href="{{ url_for('enrollments') }}">Back to Enrollment List</a>
+</body>
+</html>

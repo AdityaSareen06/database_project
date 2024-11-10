@@ -1,0 +1,17 @@
+<form method="POST">
+    <label for="student_id">Student:</label><br>
+    <select id="student_id" name="student_id" required>
+        {% for student in students %}
+        <option value="{{ student.student_id }}" {% if student.student_id == enrollment.student_id %}selected{% endif %}>{{ student.first_name }} {{ student.last_name }}</option>
+        {% endfor %}
+    </select><br><br>
+
+    <label for="course_id">Course:</label><br>
+    <select id="course_id" name="course_id" required>
+        {% for course in courses %}
+        <option value="{{ course.course_id }}" {% if course.course_id == enrollment.course_id %}selected{% endif %}>{{ course.course_name }}</option>
+        {% endfor %}
+    </select><br><br>
+
+    <button type="submit">Update Enrollment</button>
+</form>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Course</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/formstyle.css') }}">
+</head>
+<body>
+    <h2>Add New Course</h2>
+    <form method="POST">
+        <label for="course_name">Course Name:</label><br>
+        <input type="text" id="course_name" name="course_name" required><br><br>
+
+        <label for="teacher_id">Teacher:</label><br>
+        <select id="teacher_id" name="teacher_id" required>
+            {% for teacher in teachers %}
+                <option value="{{ teacher.teacher_id }}">{{ teacher.first_name }} {{ teacher.last_name }}</option>
+            {% endfor %}
+        </select><br><br>
+
+        <label for="credits">Credits:</label><br>
+        <input type="number" id="credits" name="credits" required><br><br>
+
+        <button type="submit">Add Course</button>
+    </form>
+    <br>
+    <a href="{{ url_for('courses') }}">Back to Course List</a>
+</body>
+</html>

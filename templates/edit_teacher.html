@@ -1,0 +1,15 @@
+<form method="POST">
+    <label for="first_name">First Name:</label><br>
+    <input type="text" id="first_name" name="first_name" value="{{ teacher.first_name }}" required><br><br>
+
+    <label for="last_name">Last Name:</label><br>
+    <input type="text" id="last_name" name="last_name" value="{{ teacher.last_name }}" required><br><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" value="{{ teacher.email }}" required><br><br>
+
+    <label for="phone">Phone:</label><br>
+    <input type="text" id="phone" name="phone" value="{{ teacher.phone }}" required><br><br>
+
+    <button type="submit">Update Teacher</button>
+</form>
