@@ -1,3 +1,7 @@
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/formstyle.css') }}">
+</head>
+<h2>Edit Teacher</h2>
 <form method="POST">
     <label for="first_name">First Name:</label><br>
     <input type="text" id="first_name" name="first_name" value="{{ teacher.first_name }}" required><br><br>
