@@ -1,81 +1,80 @@
+/* Form Container */
 form {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f3f7fb;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
     max-width: 500px;
-    margin: 0 auto;
-    font-size: 16px;
+    margin: 20px auto;
+    font-size: 15px;
+    transition: box-shadow 0.3s ease;
+}
+
+form:hover {
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
 }
 
 form label {
-    font-weight: 600;
+    font-weight: 700;
     display: block;
-    margin-bottom: 8px;
-    color: #555;
+    margin-bottom: 5px;
+    color: #333;
 }
 
 form input, form select {
     width: 100%;
-    padding: 12px;
+    padding: 10px;
     margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
+    border: 2px solid #e3e7ed;
+    border-radius: 6px;
+    font-size: 15px;
+    transition: border-color 0.3s ease;
     box-sizing: border-box;
 }
 
 form input:focus, form select:focus {
     outline: none;
-    border-color: #4CAF50;
+    border-color: #0073e6;
 }
 
 form button {
-    background-color: #4CAF50;
+    background-color: #0073e6;
     color: white;
-    padding: 12px 20px;
+    padding: 12px;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     cursor: pointer;
     font-size: 16px;
     width: 100%;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
 form button:hover {
-    background-color: #45a049;
-}
-
-form button:active {
-    background-color: #3e8e41;
+    background-color: #005bb5;
 }
 
 a {
-    color: #4CAF50;
+    color: #0073e6;
     text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s ease;
+    font-weight: 700;
 }
 
 a:hover {
-    color: #45a049;
-    text-decoration: underline;
+    color: #005bb5;
 }
+
 .btn {
     display: inline-block;
-    padding: 12px 20px;
-    background-color: #4CAF50;
+    padding: 10px 16px;
+    background-color: #0073e6;
     color: white;
     text-decoration: none;
     border-radius: 5px;
-    margin: 10px 0;
-    font-size: 16px;
+    font-size: 15px;
     transition: background-color 0.3s ease;
 }
 
 .btn:hover {
-    background-color: #45a049;
-}
-
-.btn:active {
-    background-color: #3e8e41;
+    background-color: #005bb5;
 }
